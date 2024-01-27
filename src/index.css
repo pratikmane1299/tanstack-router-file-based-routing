@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,input, label {
+  display: block;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+li {
+  margin-right: 10px;
+  /* display: inline-block; */
+
+  color: #000;
+}
+
+.about-tabs {
+  display: flex;
+  align-items: center;
+  background: #ccc;
+}
+
+.about-tabs li>a {
+  padding: 10px;
+  color: #000;
+}
