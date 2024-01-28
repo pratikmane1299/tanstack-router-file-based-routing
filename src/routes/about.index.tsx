@@ -5,5 +5,5 @@ export const Route = createFileRoute("/about/")({
 });
 
 function AboutSummary() {
-  return <div>this is a summary route</div>;
+  return <div>this is a profile route</div>;
 }

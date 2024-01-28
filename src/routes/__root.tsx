@@ -4,40 +4,29 @@ export const Route = createRootRoute({
   component: Root,
 });
 
+const links = [
+  { path: "/", name: "Home" },
+  { path: "/about", name: "About Me" },
+  { path: "/posts", name: "Posts" },
+];
+
 export default function Root() {
   return (
-    <div>
+    <div className="app">
       <header>
         <nav>
-          <ul>
-            <li>
-              <Link
-                to={"/"}
-                activeOptions={{ exact: true }}
-                activeProps={{ style: { fontWeight: "bold" } }}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/about"}
-                activeOptions={{ exact: true }}
-                activeProps={{ style: { fontWeight: "bold" } }}
-              >
-                About Me
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to={"/posts"}
-                activeOptions={{ exact: true }}
-                activeProps={{ style: { fontWeight: "bold" } }}
-              >
-                Posts
-              </Link>
-            </li>
+          <ul className="navlinks">
+            {links.map((link, idx) => (
+              <li key={idx}>
+                <Link
+                  to={link.path}
+                  activeOptions={{ exact: true }}
+                  activeProps={{ style: { fontWeight: "bold" } }}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>

@@ -4,7 +4,9 @@
   padding: 0;
 }
 
-a,input, label {
+a,
+input,
+label {
   display: block;
 }
 
@@ -18,6 +20,24 @@ li {
   /* display: inline-block; */
 
   color: #000;
+}
+
+.app {
+  text-align: center;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navlinks li>a {
+  padding: 10px;
 }
 
 .about-tabs {
